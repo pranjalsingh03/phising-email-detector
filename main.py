@@ -1,5 +1,4 @@
 from detector.rule_factory import RuleFactory
-from config.settings import Settings
 
 def main():
     email = {
