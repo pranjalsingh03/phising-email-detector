@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify # type: ignore
 from detector.rule_factory import RuleFactory
+from flask_cors import CORS # type: ignore
 
 app = Flask(__name__)
+CORS(app)
 
 def check_email(email):
     rules = ["suspicious_links", "sender_address", "urgent_language"]
