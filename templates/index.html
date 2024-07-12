@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Phishing Email Detector</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="mb-4">Phishing Email Detector</h1>
+      <form method="POST">
+        <div class="form-group">
+          <label for="from">From:</label>
+          <input type="email" class="form-control" id="from" name="from" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input type="text" class="form-control" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="body">Body:</label>
+          <textarea class="form-control" id="body" name="body" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Check Email</button>
+        <button type="submit" class="btn btn-secondary" name="clear">Clear Report</button>
+      </form>
+    </div>
+  </body>
+</html>
