@@ -5,4 +5,7 @@ class SenderAddressRule(BaseRule):
     def check(self, email: dict) -> bool:
         settings = Settings()
         suspicious_domains = settings.get_setting('suspicious_domains')
-        return any(domain in email['from'] for domain in suspicious_domains)
+        for domain in suspicious_domains:
+            if domain in email['from']:
+                return True
+        return False

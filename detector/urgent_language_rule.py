@@ -6,4 +6,7 @@ class UrgentLanguageRule(BaseRule):
         settings = Settings()
         urgent_keywords = settings.get_setting('urgent_keywords')
         subject_and_body = email['subject'] + ' ' + email['body']
-        return any(keyword in subject_and_body.lower() for keyword in urgent_keywords)
+        for keyword in urgent_keywords:
+            if keyword in subject_and_body.lower():
+                return True
+        return False
